@@ -13,10 +13,8 @@ import me.wsman217.AdBroadCast.announcement.AnnouncementConfig;
 import me.wsman217.AdBroadCast.announcement.AnnouncementThread;
 import me.wsman217.AdBroadCast.commands.AddAd;
 import me.wsman217.AdBroadCast.commands.ChatColorCodes;
-import me.wsman217.AdBroadCast.messages.Messages;
 
 public class Main extends JavaPlugin {
-	public Messages messages;
 
 	public String prefix;
 	public int interval;
@@ -40,7 +38,6 @@ public class Main extends JavaPlugin {
 		System.out.println("AdBroadCast is ENABLED");
 		System.out.println("Author: wsman217");
 
-		messages = new Messages(this);
 		getCommand("advertisement").setExecutor(aa);
 		getCommand("ColorCodes").setExecutor(new ChatColorCodes(this));
 
