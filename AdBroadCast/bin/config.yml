@@ -1,6 +1,0 @@
-prefix: '&4[Announcement]'
-messages:
-- '&cDemo Announcement'
-interval: 30
-enabled: true
-random: false
