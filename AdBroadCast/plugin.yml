@@ -1,0 +1,69 @@
+name: AdBroadCast
+main: me.wsman217.AdBroadCast.Main
+version: 1.0
+commands:
+   advertisement:
+      description: Manage Announcements
+      usage: Use /<command> help to get a list of commands.
+      aliases: ad
+      
+   ColorCodes:
+      description: List color codes
+      usage: Use /<command> to list all availible color codes for /ad
+permissions:
+    ad.*:
+        description: Gives access to all announcement commands.
+        children:
+            Ad.ChatColor.list: true
+            Ad.receive: true
+            Ad.add: true
+            Ad.remove: true
+            Ad.broadcast: true
+            Ad.list: true
+            Ad.prefix: true
+            Ad.enable: true
+            ad.disable: true
+            ad.interval: true
+            ad.reload: true
+            ad.random: true
+            ad.version: true
+    Ad.ChatColor.list: 
+        description: Allows you to list chat colors.
+        default: op
+    ad.receive:
+        description: Allows you to receive announcements.
+        default: op        
+    ad.add:
+        description: Allows you to add announcements.
+        default: op
+    ad.remove:
+        description: Allows you to remove announcements.
+        default: op
+    ad.list:
+        description: Allows you to list announcements.
+        default: op    
+    ad.broadcast:
+        description: Allows you to manually broadcast an ad.
+        default: op
+    ad.prefix:
+        description: Allows you to change the announcement prefix.
+        default: op
+    ad.enable:
+        description: Allows you to enable announcements.
+        default: op
+    ad.disable:
+        description: Allows you to disable announcements.
+        default: op
+    annoucement.interval:
+        description: Allows you to change the announcement interval.
+        default: op
+    annoucement.reload:
+        description: Allows you to reload the configuration.
+        default: op
+    ad.random:
+        description: Allows you to toggle random mode.
+        default: op
+    ad.version:
+        description: Allows you to access plugin version information.
+        default: op
+        
